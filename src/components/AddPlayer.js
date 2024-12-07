@@ -10,7 +10,7 @@ const AddPlayer = () => {
     const [players, setPlayers] = useState([]);
     const [selectedPlayer, setSelectedPlayer] = useState('');
 
-    // Fetch players
+    
     useEffect(() => {
         const fetchPlayers = async () => {
             try {
@@ -24,7 +24,7 @@ const AddPlayer = () => {
         fetchPlayers();
     }, []);
 
-    // Add player
+   
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -49,7 +49,7 @@ const AddPlayer = () => {
         }
     };
 
-    // Delete player
+   
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:4000/api/players/${id}`);
@@ -61,7 +61,7 @@ const AddPlayer = () => {
         }
     };
 
-    // Update goals
+    
     const handleUpdateGoals = async () => {
         if (!selectedPlayer || !goals) {
             setMessage('Please select a player and enter a valid number of goals.');

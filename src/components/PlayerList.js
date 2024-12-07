@@ -23,7 +23,7 @@ const PlayerList = () => {
         <Container className="mt-5">
             <h2 className="text-center mb-4">Top 10 Premier League Scorers</h2>
 
-            {/* Search bar */}
+           
             <Form className="mb-4">
                 <Form.Control
                     type="text"
@@ -33,20 +33,19 @@ const PlayerList = () => {
                 />
             </Form>
 
-            {/* Player cards */}
+          
             <Row>
                 {filteredPlayers.length > 0 ? (
                     filteredPlayers.map((player) => (
                         <Col sm={12} md={6} lg={4} className="mb-4" key={player._id}>
                             <Card>
-                                {/* Ensure the image is properly displayed */}
-                                <Card.Img
+                            <Card.Img
                                     variant="top"
                                     src={player.imageUrl && player.imageUrl.trim() !== "" 
-                                        ? player.imageUrl 
-                                        : 'https://via.placeholder.com/150'}
+                                        ? player.imageUrl  
+                                        : 'https://via.placeholder.com/150'}  
                                     alt={`${player.name}'s image`}
-                                    style={{ height: '200px', objectFit: 'cover' }}
+                                   
                                 />
                                 <Card.Body>
                                     <Card.Title>{player.name}</Card.Title>
