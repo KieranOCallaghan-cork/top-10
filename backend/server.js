@@ -23,6 +23,10 @@ const playerSchema = new mongoose.Schema({
     name: { type: String, required: true },
     goals: { type: Number, required: true },
     team: { type: String, required: true },
+    matchesPlayed: { type: Number, required: true },
+    assists: { type: Number, required: true },
+    imageUrl: { type: String, required: true },
+    nationality: { type: String, required: true },
 });
 
 const Player = mongoose.model('Player', playerSchema);
@@ -39,10 +43,19 @@ app.get('/api/players', async (req, res) => {
 });
 
 // 2. Add a new player
+// Add a new player
 app.post('/api/players', async (req, res) => {
     try {
-        const { name, goals, team } = req.body;
-        const newPlayer = new Player({ name, goals, team });
+        const { name, goals, team, matchesPlayed, assists, imageUrl, nationality } = req.body;
+        const newPlayer = new Player({
+            name,
+            goals,
+            team,
+            matchesPlayed,
+            assists,
+            imageUrl,
+            nationality,
+        });
         await newPlayer.save();
         res.status(201).json(newPlayer);
     } catch (err) {
@@ -50,14 +63,15 @@ app.post('/api/players', async (req, res) => {
     }
 });
 
-// 3. Update a player
+
+// Update a player's information
 app.put('/api/players/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, goals, team } = req.body;
+        const { name, goals, team, matchesPlayed, assists, imageUrl, nationality } = req.body;
         const updatedPlayer = await Player.findByIdAndUpdate(
             id,
-            { name, goals, team },
+            { name, goals, team, matchesPlayed, assists, imageUrl, nationality },
             { new: true }
         );
         res.json(updatedPlayer);
@@ -65,6 +79,7 @@ app.put('/api/players/:id', async (req, res) => {
         res.status(500).json({ message: 'Error updating player', error: err });
     }
 });
+
 
 // 4. Delete a player
 app.delete('/api/players/:id', async (req, res) => {
