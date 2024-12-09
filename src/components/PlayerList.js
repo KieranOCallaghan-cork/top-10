@@ -14,7 +14,7 @@ const PlayerList = () => {
             })
             .catch((err) => console.error('Error fetching players:', err));
     }, []);
-
+    // The code above fetches the players from the API when the component mounts and stores them in the players state. This is also used for the search functionality.
     const filteredPlayers = players.filter((player) =>
         player.name.toLowerCase().includes(searchTerm.toLowerCase())
     );

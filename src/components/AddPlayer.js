@@ -35,6 +35,7 @@ const AddPlayer = () => {
                 team,
                 imageUrl,
             };
+            //console.log(newPlayer);
             await axios.post('http://localhost:4000/api/players', newPlayer);
             setMessage('Player added successfully!');
             setName('');
