@@ -40,7 +40,7 @@ const Home = () => {
                                 textShadow: '2px 2px 5px rgba(0, 0, 0, 0.8)',
                             }}
                         >
-                            Welcome to Premier League Top 10 Scorers
+                            Welcome to Premier League Top Scorers
                         </Card.Title>
                         <Card.Text
                             as="p"
@@ -50,8 +50,7 @@ const Home = () => {
                                 textShadow: '1px 1px 3px rgba(0, 0, 0, 0.6)',
                             }}
                         >
-                            Discover the top-performing players in the Premier League! Track their
-                            achievements and explore their stories.
+                            Discover the top-performing players in the Premier League for goal socring!
                         </Card.Text>
                         <Button
                             variant="light"
