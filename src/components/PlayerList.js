@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Container, Row, Col, Form, Button, Modal } from 'react-bootstrap';
 import Navigation from './Navbar';
+import Footer from './footer';
 
 // PlayerList component 
 const PlayerList = () => {
@@ -157,7 +158,10 @@ const PlayerList = () => {
                     </Modal.Footer>
                 </Modal>
             </Container>
+            
+            <Footer />  
         </>
+       
     );
 };
 

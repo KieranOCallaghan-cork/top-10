@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navigation from './Navbar';
+import Footer from './footer';
 
 // AddPlayer component
 const AddPlayer = () => {
@@ -117,6 +118,8 @@ const AddPlayer = () => {
                     </button>
                 </form>
             </div>
+
+            <Footer />
         </>
     );
 };

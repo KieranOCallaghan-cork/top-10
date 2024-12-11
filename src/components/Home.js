@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Button, Container } from 'react-bootstrap';
 import Navigation from './Navbar';
+import Footer from './footer';
+import About from './About'; // Importing About Component
 
 // Home component
 const Home = () => {
@@ -50,7 +52,7 @@ const Home = () => {
                                 textShadow: '1px 1px 3px rgba(0, 0, 0, 0.6)',
                             }}
                         >
-                            Discover the top-performing players in the Premier League for goal socring!
+                            Discover the top-performing players in the Premier League for goal scoring!
                         </Card.Text>
                         <Button
                             variant="light"
@@ -68,6 +70,14 @@ const Home = () => {
                     </Container>
                 </Card.ImgOverlay>
             </Card>
+
+            {/* About Section */}
+            <Container className="mt-5">
+                <About />
+            </Container>
+
+            {/* Footer */}
+            <Footer />
         </>
     );
 };
