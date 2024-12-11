@@ -28,7 +28,7 @@ const PlayerList = () => {
     // Handle update player goals
     const handleUpdateGoals = (player) => {
         setSelectedPlayer(player);
-        setUpdatedGoals(player.goals); // Pre-fill with existing goals
+        setUpdatedGoals(player.goals); 
         setShowModal(true);
     };
 
