@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
+// Navigation Bar
 const Navigation = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" className="py-3">

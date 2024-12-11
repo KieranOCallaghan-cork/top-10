@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Card, Container, Row, Col, Form, Button, Modal } from 'react-bootstrap';
 import Navigation from './Navbar';
 
+// PlayerList component 
 const PlayerList = () => {
     const [players, setPlayers] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -31,6 +32,7 @@ const PlayerList = () => {
         setShowModal(true);
     };
 
+    // Submit updated goals
     const submitUpdate = () => {
         if (selectedPlayer && updatedGoals !== '') {
             axios

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Navigation from './Navbar';
 
+// AddPlayer component
 const AddPlayer = () => {
     const [name, setName] = useState('');
     const [goals, setGoals] = useState('');
@@ -9,9 +10,12 @@ const AddPlayer = () => {
     const [imageUrl, setImageUrl] = useState('');
     const [message, setMessage] = useState('');
 
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+
+        // Add player to the database
         try {
             const newPlayer = {
                 name,
@@ -47,7 +51,7 @@ const AddPlayer = () => {
                     borderRadius: '8px',
                     backgroundColor: '#f9f9f9',
                 }}
-            >
+            >   
                 <h2>Add a New Player</h2>
                 {message && (
                     <p style={{ color: message.includes('Error') ? 'red' : 'green' }}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, Container } from 'react-bootstrap';
 import Navigation from './Navbar';
 
+// Home component
 const Home = () => {
     return (
         <>
@@ -24,11 +25,11 @@ const Home = () => {
                 <Card.ImgOverlay
                     className="d-flex flex-column justify-content-center align-items-center"
                     style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent overlay
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
                         height: '100vh',
                     }}
                 >
-                    {/* Page Title */}
+                    {/* Main Heading */}
                     <Container className="text-center">
                         <Card.Title
                             as="h1"
@@ -52,7 +53,6 @@ const Home = () => {
                             Discover the top-performing players in the Premier League! Track their
                             achievements and explore their stories.
                         </Card.Text>
-                        {/* Call-to-Action Button */}
                         <Button
                             variant="light"
                             size="lg"
