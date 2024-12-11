@@ -8,7 +8,7 @@ const Navigation = () => {
             <Container>
                 {/* Centered Brand Name */}
                 <Navbar.Brand href="/" className="mx-auto text-center" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-                    Premier League Top 10
+                    Premier League Top Scorers
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
